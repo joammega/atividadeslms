@@ -49,8 +49,11 @@
     cursor: pointer;
     user-select: none;
 }
-.conteudo ul li:hover .texto{
+.abrir{
     max-height: 1000px;
+    overflow: hidden;
+    background-color: white;
+    transition: max-height 0.5s;
 }
 .open{
     font-size: 20px;
