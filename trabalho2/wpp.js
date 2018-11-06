@@ -8,7 +8,7 @@ enviar.addEventListener("click", function(event){
     input.value = "";
     
 })
-function enviarmsg(value, idgrupo){  
+function enviarmsg(value, id){  
     let xhttp = new XMLHttpRequest();
     let url = "http://localhost:3000/conversas"
     xhttp.onreadystatechange = function(){
@@ -21,17 +21,15 @@ function enviarmsg(value, idgrupo){
     xhttp.open("POST", url, true);
     xhttp.setRequestHeader("Content-type","application/json");
     let item = {
-        idgrupo : atual,
-        nome : "joao",
-        celular : 1,
+        idgrupo : id,
+        nome : localStorage.getItem("nome"),
         mensagem : value
     }
-    contador+=1;
     item = JSON.stringify(item);
     xhttp.send(item);
 
 }
-
+let grupo = document.querySelector(".conteiner .header .grupo h2")
 function addamigo(text1, text2, id){
     let amigos = document.querySelector(".conteiner .amigos .lista");
 
@@ -58,11 +56,11 @@ function addamigo(text1, text2, id){
     amigo.appendChild(msg);
 
     amigos.appendChild(amigo);
-
+    let caixa = document.querySelector(".conteiner .mensagens .caixa");
     amigos.addEventListener("click",function(){
-        let caixa = document.querySelector(".conteiner .mensagens .caixa");
         carregarmsgs(id);
         caixa.style.display = "block";
+        grupo.innerHTML = text1;
         atual = id;
     })
 }
@@ -87,6 +85,7 @@ function ultimamsg(user, id){
     xhttp.open("GET", url, true);
     xhttp.send();
 }
+let lista = document.querySelector(".conteiner .amigos .lista")
 function criarlista(){
     let url = "http://localhost:3000/grupos"
     let xhttp = new XMLHttpRequest();
@@ -95,28 +94,31 @@ function criarlista(){
             let parsed = JSON.parse(xhttp.responseText);
             let nome = "";
             let id = ""
-            let lista = document.querySelector(".conteiner .amigos .lista")
             for(let i of parsed){
                 console.log(i);
                 lista.innerHTML = "";
                 if(i.membros.length == 2){
                     for(let j=0; j<i.membros.length;j++){
-                        if(i.membros[j].celular == localStorage.getItem("celular")){
+                        if(i.membros[j].nome == localStorage.getItem("nome")){
                             if(j==1){
                                 nome = i.membros[0].nome;
                             }
                             else{
                                 nome = i.membros[1].nome;
                             }
-                            id = i.idgrupo;
+                            id = i.id;
                             ultimamsg(nome, id);
                         }
                     }
                 }
                 else{
-                    nome = i.grupo;
-                    id = i.idgrupo;
-                    ultimamsg(nome, id);
+                    for(let j of i.membros){
+                        if(j.nome == localStorage.getItem("nome")){
+                            nome = i.grupo;
+                            id = i.id;
+                            ultimamsg(nome, id);
+                        }
+                    }
                 }
                 
             }
@@ -136,7 +138,7 @@ function addmsg(id, mensagem){
 
     let msg = document.createElement("div")
 
-    if(localStorage.getItem("celular") == id){
+    if(localStorage.getItem("nome") == id){
         msg.classList.add("msg2");
     }
     else{
@@ -147,16 +149,17 @@ function addmsg(id, mensagem){
     conteudo.appendChild(msg);
 
 }
+let conteudo = document.querySelector(".conteiner .mensagens .conteudo");
 function carregarmsgs(id){
     let url = "http://localhost:3000/conversas?idgrupo="+id
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
         if(xhttp.readyState == 4){
             let parsed = JSON.parse(xhttp.responseText);
-            let conteudo = document.querySelector(".conteiner .mensagens .conteudo");
+            
             conteudo.innerHTML = "";
             for(let i of parsed){
-                addmsg(i.celular, i.mensagem);
+                addmsg(i.nome, i.mensagem);
                 conteudo.scrollTop = conteudo.scrollHeight;
             }
         }
@@ -166,5 +169,72 @@ function carregarmsgs(id){
 
 }
 
+let button = document.querySelector(".conteiner .header .logar")
+let logado = document.querySelector(".conteiner .header .logar span")
+let status = "";
+let botaogrupospan = document.querySelector(".conteiner .amigos .botao span");
+function logue(){
+    if(status == "logado"){
+        logado.innerHTML = "Sair";
+        botaogrupospan.innerHTML = "Add Grupo"
+        criarlista()
+        
+    }
 
-criarlista()
+}
+function deslogue(){
+    lista.innerHTML = "";
+    conteudo.innerHTML = "";
+    grupo.innerHTML = "";
+    logado.innerHTML= "Logar";
+    botaogrupospan = "";
+    localStorage.setItem("nome", "");
+    status = "deslogado"
+}
+button.addEventListener("click",function(){
+    if(logado.innerHTML == "Logar"){
+        let nome = prompt("digite seu nome de acesso");
+        localStorage.setItem("nome", nome);
+        status = "logado";
+        logue();
+    }
+    else{
+        deslogue();
+    }
+})
+function addgrupo(){
+    let xhttp = new XMLHttpRequest();
+    let url = "http://localhost:3000/grupos"
+    xhttp.onreadystatechange = function(){
+        if(xhttp.readyState==4){
+            criarlista()
+        }
+    }
+    let grupo = prompt("Digite o nome do grupo:");
+    let membro = prompt("diga o nome dos membros separando por espaço:");
+    let lista = membro.split(" ")
+    let membros = [];
+    let cont = 1;
+    for(let i of lista){
+        let objeto= {nome:i, id:cont}
+        membros.push(objeto);
+        cont+=1;
+    }
+    let eu = {
+        nome: localStorage.getItem("nome"),
+        id:cont
+    }
+    membros.push(eu);
+    let item= {
+        grupo: grupo,
+        membros: membros
+    }
+    xhttp.open("POST",url, true);
+    xhttp.setRequestHeader("Content-type","application/json");
+    xhttp.send(JSON.stringify(item));
+}
+let botaogrupo = document.querySelector(".conteiner .amigos .botao");
+botaogrupo.addEventListener("click", function(){
+    addgrupo();
+})
+logue()

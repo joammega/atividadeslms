@@ -13,6 +13,34 @@
     flex-basis: 100%;
     background-color: rgb(103, 253, 115);
     height: 10%;
+    overflow: hidden;
+}
+.conteiner .header .logo{
+    width: 30%;
+    height: 100%;
+    border-right: solid 1px gray;
+    background-image: url(./2000px-WhatsApp_logo.svg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    float: left;
+}
+.conteiner .header .grupo{
+    float: left;
+    font-size: 22px;
+    padding: 15px;
+}
+.conteiner .header .logar{
+    float: right;
+    font-size: 22px;
+    padding: 18px;
+    border-left: 1px solid gray;
+    height: 100%;
+    cursor: pointer;
+    
+}
+.conteiner .header .logar:hover{
+    background-color: rgb(53, 207, 66);
 }
 .conteiner .amigos{
     flex-basis: 30%;
@@ -20,8 +48,21 @@
     height: 90%;
    
 }
+.conteiner .amigos .botao{
+    height: 10%;
+    background-color: rgb(201, 201, 201);
+    border-top: 1px solid gray;
+    cursor: pointer;
+    text-align: center;
+    font-size: 26px;
+
+}
+.conteiner .amigos .botao span{
+    display: block;
+    margin: 15px;
+}
 .conteiner .amigos .lista{
-    height: 100%;
+    height: 90%;
     overflow: auto;
 
 }
@@ -114,7 +155,47 @@
     box-shadow: 1px 1px 2px black;
     border: none;
 }
-
+.conteiner .overlay{
+    width: 900px;
+    margin: auto;
+    height: 100vh;
+    position: fixed;
+    background-color: rgb(201, 201, 201);
+    display: none;
+}
+.conteiner .overlay .login, .conteiner .overlay .cadastrar{
+    height:60%;
+    width: 40%;
+    margin: auto;
+    margin-top: 20%; 
+    background-color: rgb(103, 253, 115);
+    border-radius: 25px;
+    display: none;
+}
+.conteiner .overlay .login form, .conteiner .overlay .cadastrar form{
+    width: 70%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+    font-size: 22px;
+}
+.conteiner .overlay .login form input, .conteiner .overlay .cadastrar form input{
+    display: block;
+    width: 100%;
+    margin: 10px;
+}
+.conteiner .overlay .login form button, .conteiner .overlay .cadastrar form button{
+    display: block;
+    width: 100px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.conteiner .overlay .login form span, .conteiner .overlay .cadastrar form span{
+    text-decoration: underline;
+    color: rgb(110, 85, 255);
+    cursor: pointer;
+    font-size: 18px;
+}
 ::-webkit-scrollbar{
     width: 10px;
 }

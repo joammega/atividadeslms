@@ -7,6 +7,55 @@
     }
   ],
   "grupos": [
-    
+    {
+      "grupo": "grupo da familia",
+      "id": "1",
+      "membros": [
+        {
+          "id": 1,
+          "nome": "joao"
+        },
+        {
+          "id": 2,
+          "nome": "maria"
+        }
+      ]
+    },
+    {
+      "grupo": "joao",
+      "membros": [
+        {
+          "nome": "joao",
+          "id": 1
+        }
+      ],
+      "id": "Oym08tY"
+    },
+    {
+      "grupo": "joasa",
+      "membros": [
+        {
+          "nome": "jose",
+          "id": 1
+        },
+        {
+          "nome": "maria",
+          "id": 2
+        },
+        {
+          "nome": "joao",
+          "id": 3
+        }
+      ],
+      "id": "64FEe76"
+    }
+  ],
+  "conversas": [
+    {
+      "idgrupo": "1",
+      "nome": "joao",
+      "mensagem": "oi amor",
+      "id": 1
+    }
   ]
 }
