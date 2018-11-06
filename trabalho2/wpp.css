@@ -46,6 +46,7 @@
     flex-basis: 30%;
     background-color: rgb(163, 163, 163);
     height: 90%;
+    overflow: hidden;
    
 }
 .conteiner .amigos .botao{
@@ -64,6 +65,7 @@
 .conteiner .amigos .lista{
     height: 90%;
     overflow: auto;
+    width: 100%;
 
 }
 .conteiner .amigos .lista .amigo{
@@ -73,9 +75,10 @@
     overflow: hidden;
     user-select: none;
     cursor: pointer;
+    width: 100%;
 }
 .conteiner .amigos .lista .amigo .img{
-    width: 70px;
+    width: 30%;
     height: 100%;
     background-image: url("./1486395884-account_80606.png");
     background-position: center;
@@ -85,6 +88,8 @@
 }
 .conteiner .amigos .lista .amigo .textos{
     float: left; 
+    overflow: hidden;
+    width:70%; 
 }
 .conteiner .amigos .lista .amigo .nome{
     color: rgb(29, 29, 29);
@@ -96,6 +101,7 @@
     padding: 5px;
     padding-top: 0;
     color: rgb(37, 37, 37);
+    overflow: hidden;
 }
 .conteiner .amigos .lista .amigo:hover{
     background-color: rgb(179, 179, 179)
@@ -120,6 +126,8 @@
     padding: 10px;
     margin: 25px;
     margin-bottom: 10px;
+    max-width: 300px;
+    overflow: hidden;
 }
 .conteiner .mensagens .conteudo .msg2 p{
     background-color: rgb(156, 240, 131);
@@ -128,6 +136,8 @@
     padding: 10px;
     margin: 25px;
     margin-bottom: 10px;
+    max-width: 300px;
+    overflow: hidden;
 }
 .conteiner .mensagens .caixa{
     height: 8%;

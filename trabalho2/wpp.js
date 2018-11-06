@@ -57,7 +57,7 @@ function addamigo(text1, text2, id){
 
     amigos.appendChild(amigo);
     let caixa = document.querySelector(".conteiner .mensagens .caixa");
-    amigos.addEventListener("click",function(){
+    amigo.addEventListener("click",function(){
         carregarmsgs(id);
         caixa.style.display = "block";
         grupo.innerHTML = text1;
@@ -171,14 +171,12 @@ function carregarmsgs(id){
 
 let button = document.querySelector(".conteiner .header .logar")
 let logado = document.querySelector(".conteiner .header .logar span")
-let status = "";
 let botaogrupospan = document.querySelector(".conteiner .amigos .botao span");
 function logue(){
-    if(status == "logado"){
+    if(localStorage.getItem("logado") == "logado"){
         logado.innerHTML = "Sair";
         botaogrupospan.innerHTML = "Add Grupo"
         criarlista()
-        
     }
 
 }
@@ -189,13 +187,13 @@ function deslogue(){
     logado.innerHTML= "Logar";
     botaogrupospan = "";
     localStorage.setItem("nome", "");
-    status = "deslogado"
+    localStorage.setItem("logado", "deslogado")
 }
 button.addEventListener("click",function(){
     if(logado.innerHTML == "Logar"){
         let nome = prompt("digite seu nome de acesso");
         localStorage.setItem("nome", nome);
-        status = "logado";
+        localStorage.setItem("logado", "logado")
         logue();
     }
     else{
