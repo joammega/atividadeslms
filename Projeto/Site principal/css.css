@@ -53,6 +53,8 @@
     overflow: hidden;
 }
 .parte1 .botao .click{
+    text-decoration: none;
+    color: white;
     float: right;
     margin-right: 20vw; 
     padding: 8px;

@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.conteiner .parte1{
+    background-image: url("./imgs/Prancheta\ 33\ cópia.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.conteiner .parte1 .logo{
+    overflow: hidden;
+}
+.conteiner .parte1 .logo a{
+    float: left;
+}
+.conteiner .parte1 .texto{
+    font-size: 26px;
+    color: white;
+    width: 60%;
+    margin: auto;
+    margin-top: 75px;
+}
+.conteiner .parte1 .algumacoisa{
+    height: 200px;
+}
+.conteiner .parte1 .footer{
+    background-image: url("./imgs/Prancheta\ 10.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    height: 200px;
+    transform: translate(0,1px)
+}
+.conteiner .parte2{
+    background-color: white;
+    text-align: center;
+}
+.conteiner .parte2 .cabecalho h3{
+    padding-top: 75px;
+    font-size: 46px;
+}
+.conteiner .parte2 .cabecalho .linha{
+    height: 8px;
+    width: 30%;
+    background-color: rgb(64, 176, 127);
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 10px;
+
+}
+.conteiner .parte2 .texto{
+    width: 60%;
+    margin: auto;
+    margin-top: 25px;
+}
