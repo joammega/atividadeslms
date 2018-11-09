@@ -43,7 +43,7 @@
 .conteiner .parte2 .cabecalho .linha{
     height: 8px;
     width: 30%;
-    background-color: rgb(64, 176, 127);
+    background-color: rgb(206, 160, 202);
     border-radius: 25px;
     margin: auto;
     margin-top: 10px;
@@ -53,4 +53,15 @@
     width: 60%;
     margin: auto;
     margin-top: 25px;
+}
+.conteiner .parte2 .botao{
+    margin-top: 25px;
+    margin-bottom: 75px;
+}
+.conteiner .parte2 .botao a{
+    padding: 8px;
+    border-radius: 25px;
+    background-color: rgb(206, 160, 202);
+    text-decoration: none;
+    color: white;
 }
