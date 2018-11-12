@@ -7,6 +7,7 @@
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    text-align: center;
 }
 .conteiner .parte1 .logo{
     overflow: hidden;
@@ -64,4 +65,61 @@
     background-color: rgb(206, 160, 202);
     text-decoration: none;
     color: white;
+}
+.conteiner .parte2 .botao a:hover{
+    background-color: white;
+    border: 1px solid rgb(206, 160, 202);
+    color: rgb(206, 160, 202);
+}
+.conteiner .parte3{
+    background-image: url("./imgs/Prancheta\ 33.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+}
+.conteiner .parte3 .header{
+    height: 200px;
+    background-image: url("./imgs/Prancheta\ 12.png");
+    background-position: top;
+    background-size: 100vw;
+    background-repeat: no-repeat;
+}
+.conteiner .parte3 .cabecalho h3{
+    font-size: 46px;
+}
+.conteiner .parte3 .cabecalho .linha{
+    height: 8px;
+    width: 30%;
+    background-color: white;
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 10px;
+}
+.conteiner .parte3 .texto{
+    width: 60%;
+    margin: auto;
+    margin-top: 25px;
+}
+.conteiner .parte3 .botao{
+    margin-top: 125px;
+    padding-bottom: 75px;
+
+}
+.conteiner .parte3 .botao a{
+    padding: 8px;
+    border-radius: 25px;
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+    border: white 1px solid;
+}
+.conteiner .parte3 .botao a:hover{
+    color: rgb(206, 160, 202);
+    background-color: white;
+}
+.foooter{
+    background-color: rgb(206, 160, 202);
+    height: 200px;
 }

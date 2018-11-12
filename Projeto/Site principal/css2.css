@@ -33,12 +33,52 @@
     width: 60%;
     margin: auto;
     text-align: center;
+    margin-bottom: 75px;
 
 }
 .conteiner .conteudo .quadro .quest{
     display: inline-block;
-    margin: 15px;
-    width: 200px;
-    height: 250px;
-    border: 1px solid black;
+    margin: 25px 60px 25px 60px;
+    width: 300px;
+    height: 300px;
+}
+.conteiner .conteudo .quadro .quest .borda{
+    background-color: rgb(245, 172, 142);
+    height: 10px;
+    border-radius: 25px 25px 0 0;
+}
+.conteiner .conteudo .quadro .quest .caixa{
+    border: solid gray 1px;
+    height: 100%;
+}
+.conteiner .conteudo .quadro .quest .caixa h3{
+    color: gray;
+    text-align: left;
+    padding: 8px;
+    font-size: 14px;
+    padding-top: 3px;
+}
+.conteiner .conteudo .quadro .quest .caixa p{
+    text-align: justify;
+    padding: 15px;
+    padding-top: 3px;
+    height: 100px;
+}
+.conteiner .conteudo .quadro .quest .caixa ul{
+    text-align: left;
+    padding: 12px;
+    padding-top: 3px;
+}
+.conteiner .conteudo .quadro .quest .caixa ul li{
+    cursor: pointer;
+    padding: 3px
+}
+.conteiner .conteudo .quadro .quest .caixa ul li:hover{
+    background-color: rgb(245, 172, 142);
+    color: white;
+    border-radius: 25px;
+}
+.foooter{
+    height:200px ;
+    background-color: rgb(245, 172, 142)
 }
