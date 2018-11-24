@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "joammega",
+      "password": "jpda1996jpda"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "user": "joammega",
+      "data": "17 de outubro",
+      "humor": 0,
+      "comentario": "dia de prova"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
