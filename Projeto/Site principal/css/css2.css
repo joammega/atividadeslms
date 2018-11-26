@@ -29,6 +29,9 @@
   height: 200px;
   transform: translate(0, 2px);
 }
+.conteiner .conteudo {
+  position: relative;
+}
 .conteiner .conteudo .quadro {
   width: 60%;
   margin: auto;
@@ -96,6 +99,60 @@
   user-select: none;
 }
 .conteiner .conteudo .quadro .button button:hover {
+  background-color: rgb(245, 172, 142);
+  color: white;
+}
+.conteiner .conteudo .card {
+  width: 60%;
+  margin: auto;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.548);
+  overflow: hidden;
+  text-align: center;
+  transform: translate(0, -50%);
+}
+.conteiner .conteudo .card img {
+  float: left;
+  width: 40%;
+  padding: 5%;
+  box-sizing: border-box;
+}
+.conteiner .conteudo .card .resposta {
+  float: left;
+  width: 50%;
+}
+.conteiner .conteudo .card .resposta h4 {
+  padding: 50px 10px 25px;
+  font-size: 26px;
+}
+.conteiner .conteudo .card .resposta .button {
+  margin-top: 40px;
+}
+.conteiner .conteudo .card .resposta .button a,
+.conteiner .conteudo .card .resposta .button button {
+  text-decoration: none;
+  color: rgb(245, 172, 142);
+  background-color: white;
+  border-radius: 25px;
+  border: 1px solid rgb(245, 172, 142);
+
+  padding: 8px 15px;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 10px;
+}
+/* .conteiner .conteudo .card .resposta .button button a {
+  text-decoration: none;
+  color: rgb(245, 172, 142);
+  display: block;
+}
+.conteiner .conteudo .card .resposta .button button a:hover {
+  color: white;
+} */
+.conteiner .conteudo .card .resposta .button a:hover,
+.conteiner .conteudo .card .resposta .button button:hover {
   background-color: rgb(245, 172, 142);
   color: white;
 }

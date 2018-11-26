@@ -91,6 +91,78 @@
 .back .funcao .conteudo .calendario .dia li:hover {
   background-color: rgba(126, 165, 215, 0.26);
 }
+.back .funcao .conteudo .humor {
+  width: 80%;
+  margin: auto;
+  height: 250px;
+  margin-top: 25px;
+}
+.back .funcao .conteudo .humor header {
+  border-radius: 25px 25px 0 0;
+  background-color: rgb(126, 164, 215);
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  height: 10%;
+}
+.back .funcao .conteudo .humor .selecao {
+  height: 45%;
+  width: 100%;
+  background-color: rgba(126, 165, 215, 0.774);
+  text-align: center;
+}
+.back .funcao .conteudo .humor .selecao .sentimento {
+  display: inline-block;
+  width: 80px;
+  border-radius: 25px;
+  color: white;
+  padding: 15px 0;
+  cursor: pointer;
+  user-select: none;
+}
+.back .funcao .conteudo .humor .selecao .sentimento:hover {
+  background-color: white;
+  color: rgb(126, 164, 215);
+}
+.back .funcao .conteudo .humor .selecao .marcado {
+  background-color: white;
+  color: rgb(126, 164, 215);
+}
+.back .funcao .conteudo .humor .selecao .sentimento img {
+  width: 60%;
+}
+.back .funcao .conteudo .humor .selecao .sentimento span {
+  display: block;
+}
+.back .funcao .conteudo .humor .form {
+  height: 45%;
+  border: 0.5px solid rgb(126, 164, 215);
+  box-sizing: border-box;
+  position: relative;
+}
+.back .funcao .conteudo .humor .form input {
+  height: 60%;
+  border: transparent;
+  width: 100%;
+}
+.back .funcao .conteudo .humor .form button {
+  outline: none;
+  background-color: rgb(126, 164, 215);
+  color: white;
+  border-radius: 25px;
+  padding: 8px;
+  border: none;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  cursor: pointer;
+  user-select: none;
+}
+.back .funcao .conteudo .humor .form button:hover {
+  color: rgb(126, 164, 215);
+  background-color: white;
+  border: 1px solid rgb(126, 164, 215);
+}
 .posts {
   margin-top: 300px;
 }
