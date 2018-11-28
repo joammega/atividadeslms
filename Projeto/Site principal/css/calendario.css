@@ -206,6 +206,7 @@
   position: relative;
 }
 .posts .lista .card .humor img {
+  width: 80%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -224,4 +225,43 @@
   padding: 15px;
   font-size: 22px;
   color: rgb(126, 164, 215);
+}
+.posts .grafico {
+  width: 70%;
+  margin: auto;
+  margin-top: 55px;
+  background-color: rgb(126, 164, 215);
+  height: 400px;
+  margin-bottom: 55px;
+}
+.posts .grafico h3 {
+  color: white;
+  font-size: 26px;
+  text-align: center;
+  padding: 8px;
+}
+.posts .grafico .humor {
+  width: 80%;
+  margin: auto;
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  height: 40px;
+  overflow: hidden;
+}
+.posts .grafico .humor .cor {
+  background-color: rgb(64, 176, 127);
+  width: 0%;
+  height: 100%;
+  float: left;
+}
+.posts .grafico .humor img {
+  height: 40px;
+  float: left;
+  transform: translate(-50%, 0);
+}
+.footer {
+  height: 300px;
+  background-color: rgb(126, 164, 215);
 }

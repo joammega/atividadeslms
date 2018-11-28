@@ -76,5 +76,12 @@ function novomenu(nome) {
 
   lista.appendChild(li);
 }
-
+let nav = document.querySelector(".parte1 .cabecalho .nav");
+window.addEventListener("scroll", function() {
+  if (this.window.pageYOffset > 10) {
+    nav.classList.add("scroll");
+  } else {
+    nav.classList.remove("scroll");
+  }
+});
 getUser();
