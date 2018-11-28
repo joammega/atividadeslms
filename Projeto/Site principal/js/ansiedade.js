@@ -9,7 +9,7 @@ barra.style.width = unidade - 5 + "%";
 setadir.addEventListener("click", function() {
   for (let i = 0; i < slides.length; i++) {
     if (!slides[i].classList.contains("ativo")) {
-      slides[i].classList.add("ativo");
+      slides[i].classList.remove("inativo");
       barra.style.width = (i + 1) * unidade - 5 + "%";
       break;
     }
