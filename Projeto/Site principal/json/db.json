@@ -1,151 +1,18 @@
 {
   "users": [
     {
-      "id": 1,
-      "username": "joammega",
-      "password": "borapassar"
-    }
-  ],
-  "comments": [
-    {
-      "username": "",
-      "data": "03 de Novembro",
-      "humor": 2,
-      "comentario": "aposta ai mermao",
+      "email": "dasdas",
+      "username": "dsadas",
+      "password": "dasdas",
       "id": 1
     },
     {
-      "username": "",
-      "data": "03 de Novembro",
-      "humor": 2,
-      "comentario": "aposta ai mermao",
+      "email": "joammega",
+      "username": "joammega",
+      "password": "joammega",
       "id": 2
-    },
-    {
-      "username": "",
-      "data": "03 de Novembro",
-      "humor": 2,
-      "comentario": "aposta ai mermao",
-      "id": 3
-    },
-    {
-      "username": "",
-      "data": "03 de Novembro",
-      "humor": 2,
-      "comentario": "aposta ai mermao",
-      "id": 4
-    },
-    {
-      "username": "",
-      "data": "03 de Novembro",
-      "humor": 2,
-      "comentario": "aposta ai mermao",
-      "id": 5
-    },
-    {
-      "username": "",
-      "data": "03 de Novembro",
-      "humor": 2,
-      "comentario": "aposta ai mermao",
-      "id": 6
-    },
-    {
-      "username": "",
-      "data": "03 de Novembro",
-      "humor": 2,
-      "comentario": "aposta ai mermao",
-      "id": 7
-    },
-    {
-      "username": "",
-      "data": "31 de Novembro",
-      "humor": 0,
-      "comentario": "vo comer um cu gostoso",
-      "id": 8
-    },
-    {
-      "username": "",
-      "data": "31 de Novembro",
-      "humor": 1,
-      "comentario": "vo comer um cu gostoso",
-      "id": 9
-    },
-    {
-      "username": "",
-      "data": "31 de Novembro",
-      "humor": 1,
-      "comentario": "vo comer um cu gostoso",
-      "id": 10
-    },
-    {
-      "username": "",
-      "data": "31 de Novembro",
-      "humor": 1,
-      "comentario": "vo comer um cu gostoso",
-      "id": 11
-    },
-    {
-      "username": "",
-      "data": "31 de Novembro",
-      "humor": 1,
-      "comentario": "vo comer um cu gostoso",
-      "id": 12
-    },
-    {
-      "username": "",
-      "data": "31 de Novembro",
-      "humor": 1,
-      "comentario": "vo comer um cu gostoso",
-      "id": 13
-    },
-    {
-      "username": "",
-      "data": "31 de Novembro",
-      "humor": 1,
-      "comentario": "vo comer um cu gostoso",
-      "id": 14
-    },
-    {
-      "username": "",
-      "data": "31 de Novembro",
-      "humor": 1,
-      "comentario": "vo comer um cu gostoso",
-      "id": 15
-    },
-    {
-      "username": "",
-      "data": "31 de Novembro",
-      "humor": 1,
-      "comentario": "vo comer um cu gostoso",
-      "id": 16
-    },
-    {
-      "username": "",
-      "data": "31 de Novembro",
-      "humor": 1,
-      "comentario": "vo comer um cu gostoso",
-      "id": 17
-    },
-    {
-      "username": "",
-      "data": "31 de Novembro",
-      "humor": 1,
-      "comentario": "vo comer um cu gostoso",
-      "id": 18
-    },
-    {
-      "username": "",
-      "data": "31 de Novembro",
-      "humor": 1,
-      "comentario": "vo comer um cu gostoso",
-      "id": 19
     }
   ],
-  "teste": [
-    {
-      "resultado": 9,
-      "username": "anonimo",
-      "id": 3
-    }
-  ]
+  "comments": [],
+  "teste": []
 }

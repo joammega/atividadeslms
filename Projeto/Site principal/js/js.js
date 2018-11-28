@@ -7,8 +7,6 @@ function getUser() {
       for (let i of parsed) {
         if (localStorage.getItem("user") == i.username) {
           novomenu(i.username);
-        } else {
-          alert("Você não está logado");
         }
       }
     }
@@ -73,6 +71,39 @@ function novomenu(nome) {
   li_texto = document.createTextNode(nome);
 
   li.classList.add("user");
+
+  let div = document.createElement("div");
+  div.classList.add("botao");
+  div.appendChild(li_texto);
+  li.appendChild(div);
+
+  div = document.createElement("div");
+  div.classList.add("opcoes");
+
+  let ul = document.createElement("ul");
+  let liaux = document.createElement("li");
+  a = document.createElement("a");
+  a.href = "./perfil.html";
+  a_texto = document.createTextNode("Perfil");
+
+  a.appendChild(a_texto);
+  liaux.appendChild(a);
+  ul.appendChild(liaux);
+
+  liaux = document.createElement("li");
+  a = document.createElement("a");
+  a.href = "./index.html";
+  a_texto = document.createTextNode("Sair");
+
+  a.addEventListener("click", function() {
+    localStorage.setItem("user", "");
+  });
+  a.appendChild(a_texto);
+  liaux.appendChild(a);
+  ul.appendChild(liaux);
+
+  div.appendChild(ul);
+  li.appendChild(div);
 
   lista.appendChild(li);
 }

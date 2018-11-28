@@ -251,12 +251,14 @@
   margin-top: 10px;
 }
 .parte4 .post {
+  height: 400px;
   display: inline-block;
   margin: 45px 25px;
   width: 20%;
   text-align: justify;
   border-radius: 25px;
   background-color: rgb(64, 176, 127);
+  overflow: hidden;
 }
 .parte4 .post .img {
   width: 100px;

@@ -44,10 +44,7 @@
   margin: 30% 25%;
   box-sizing: border-box;
 }
-.ativo {
-  left: 0;
-  opacity: 1;
-}
+
 .s1 {
   background-color: rgb(126, 164, 215);
 }
@@ -84,4 +81,20 @@
   position: fixed;
   top: 3%;
   z-index: 10;
+}
+.footer,
+.footer2 {
+  position: fixed;
+  bottom: 0%;
+  z-index: 10;
+  opacity: 0;
+  left: 100%;
+  transition: opacity 1s, position 50s;
+}
+.footer img {
+  width: 100vw;
+}
+.ativo {
+  left: 0;
+  opacity: 1;
 }

@@ -32,6 +32,20 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.back .window .form form .button {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 25px;
+  border: solid 1px rgb(245, 172, 142);
+  margin: auto;
+  margin-top: 5px;
+  text-align: center;
+  color: rgb(245, 172, 142);
+}
+.back .window .form form .button:hover {
+  background-color: rgb(245, 172, 142);
+  color: white;
+}
 .back .window .linha {
   float: left;
   width: 6px;
