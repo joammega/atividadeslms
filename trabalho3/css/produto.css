@@ -1,0 +1,10 @@
+.margin {
+  margin-top: 8px;
+}
+.item {
+  width: 50%;
+  height: 200px;
+  background-color: aqua;
+  margin: auto;
+  margin-top: 50px;
+}
