@@ -2,9 +2,30 @@
   margin-top: 8px;
 }
 .item {
-  width: 50%;
-  height: 200px;
-  background-color: aqua;
+  width: 70%;
   margin: auto;
   margin-top: 50px;
+  text-align: center;
+}
+.item .img {
+  background-color: aqua;
+  width: 80%;
+  margin: auto;
+  height: 300px;
+}
+.compra {
+  overflow: hidden;
+  width: 50%;
+  margin: auto;
+}
+.compra .btncompra {
+  float: left;
+}
+.compra .quantidadeform {
+  float: left;
+  margin-left: 10px;
+  margin-top: 4px;
+}
+.compra .quantidade {
+  width: 40px;
 }
