@@ -29,3 +29,30 @@
 .compra .quantidade {
   width: 40px;
 }
+.dropcarrinho {
+  height: 300px;
+  overflow: auto;
+}
+.produtocar {
+  height: 60px;
+  position: relative;
+  width: 300px;
+  border: 0 0 0.5 0 solid gray;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.274);
+}
+.imgcar {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
+  background-color: aqua;
+  width: 50px;
+  height: 50px;
+}
+.textocar {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(0, -50%);
+  width: 200px;
+}

@@ -21,13 +21,23 @@
           <div class="col-xs-1 ">
             <div class="dropdown margin carrinho">
               <button
-                class="btn btn-primary"
+                class="btn btn-primary carrinhobtn"
                 type="button"
                 data-toggle="dropdown"
               >
                 Carrinho
               </button>
-              <ul class="dropdown-menu"></ul>
+              <div class="dropdown-menu dropcarrinho">
+                <!--
+                  <div class="produtocar">
+                    <div class="imgcar"></div>
+                    <div class="textocar">
+                      <p>Nome do produto</p>
+                      <p>1x<b>R$ 10.00</b></p>
+                    </div>
+                  </div>
+                -->
+              </div>
             </div>
             <div class="dropdown margin cadastro">
               <button
@@ -84,10 +94,8 @@
           <div class="item">
             <div class="img"></div>
             <div class="texto">
-              <p>Produto</p>
-              <p>
-                <b>R$ <span>10,00</span></b>
-              </p>
+              <p class="titulo">Produto</p>
+              <p class="valor">R$ <span class="preco">10.00</span></p>
             </div>
             <div class="compra">
               <div class="btn btn-success btncompra">Comprar</div>
@@ -99,10 +107,8 @@
           <div class="item">
             <div class="img"></div>
             <div class="texto">
-              <p>Produto</p>
-              <p>
-                <b>R$ <span>10,00</span></b>
-              </p>
+              <p class="titulo">Produto</p>
+              <p class="valor">R$ <span class="preco">10.00</span></p>
             </div>
             <div class="compra">
               <div class="btn btn-success btncompra">Comprar</div>
@@ -114,57 +120,8 @@
           <div class="item">
             <div class="img"></div>
             <div class="texto">
-              <p>Produto</p>
-              <p>
-                <b>R$ <span>10,00</span></b>
-              </p>
-            </div>
-            <div class="compra">
-              <div class="btn btn-success btncompra">Comprar</div>
-              <form class="quantidadeform" action="">
-                <input class="quantidade" type="number" />
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-4">
-          <div class="item">
-            <div class="img"></div>
-            <div class="texto">
-              <p>Produto</p>
-              <p>
-                <b>R$ <span>10,00</span></b>
-              </p>
-            </div>
-            <div class="compra">
-              <div class="btn btn-success btncompra">Comprar</div>
-              <form class="quantidadeform" action="">
-                <input class="quantidade" type="number" />
-              </form>
-            </div>
-          </div>
-          <div class="item">
-            <div class="img"></div>
-            <div class="texto">
-              <p>Produto</p>
-              <p>
-                <b>R$ <span>10,00</span></b>
-              </p>
-            </div>
-            <div class="compra">
-              <div class="btn btn-success btncompra">Comprar</div>
-              <form class="quantidadeform" action="">
-                <input class="quantidade" type="number" />
-              </form>
-            </div>
-          </div>
-          <div class="item">
-            <div class="img"></div>
-            <div class="texto">
-              <p>Produto</p>
-              <p>
-                <b>R$ <span>10,00</span></b>
-              </p>
+              <p class="titulo">Produto</p>
+              <p class="valor">R$ <span class="preco">10.00</span></p>
             </div>
             <div class="compra">
               <div class="btn btn-success btncompra">Comprar</div>
@@ -178,10 +135,8 @@
           <div class="item">
             <div class="img"></div>
             <div class="texto">
-              <p>Produto</p>
-              <p>
-                <b>R$ <span>10,00</span></b>
-              </p>
+              <p class="titulo">Produto</p>
+              <p class="valor">R$ <span class="preco">10.00</span></p>
             </div>
             <div class="compra">
               <div class="btn btn-success btncompra">Comprar</div>
@@ -193,10 +148,8 @@
           <div class="item">
             <div class="img"></div>
             <div class="texto">
-              <p>Produto</p>
-              <p>
-                <b>R$ <span>10,00</span></b>
-              </p>
+              <p class="titulo">Produto</p>
+              <p class="valor">R$ <span class="preco">10.00</span></p>
             </div>
             <div class="compra">
               <div class="btn btn-success btncompra">Comprar</div>
@@ -208,10 +161,49 @@
           <div class="item">
             <div class="img"></div>
             <div class="texto">
-              <p>Produto</p>
-              <p>
-                <b>R$ <span>10,00</span></b>
-              </p>
+              <p class="titulo">Produto</p>
+              <p class="valor">R$ <span class="preco">10.00</span></p>
+            </div>
+            <div class="compra">
+              <div class="btn btn-success btncompra">Comprar</div>
+              <form class="quantidadeform" action="">
+                <input class="quantidade" type="number" />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-4">
+          <div class="item">
+            <div class="img"></div>
+            <div class="texto">
+              <p class="titulo">Produto</p>
+              <p class="valor">R$ <span class="preco">10.00</span></p>
+            </div>
+            <div class="compra">
+              <div class="btn btn-success btncompra">Comprar</div>
+              <form class="quantidadeform" action="">
+                <input class="quantidade" type="number" />
+              </form>
+            </div>
+          </div>
+          <div class="item">
+            <div class="img"></div>
+            <div class="texto">
+              <p class="titulo">Produto</p>
+              <p class="valor">R$ <span class="preco">10.00</span></p>
+            </div>
+            <div class="compra">
+              <div class="btn btn-success btncompra">Comprar</div>
+              <form class="quantidadeform" action="">
+                <input class="quantidade" type="number" />
+              </form>
+            </div>
+          </div>
+          <div class="item">
+            <div class="img"></div>
+            <div class="texto">
+              <p class="titulo">Produto</p>
+              <p class="valor">R$ <span class="preco">10.00</span></p>
             </div>
             <div class="compra">
               <div class="btn btn-success btncompra">Comprar</div>

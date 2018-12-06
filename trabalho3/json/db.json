@@ -19,6 +19,16 @@
       "name": "dsads",
       "senha": "dsasda",
       "id": 4
+    },
+    {
+      "name": "raimundo",
+      "senha": "1234",
+      "id": 5
+    },
+    {
+      "name": "joaquim",
+      "senha": "1234",
+      "id": 6
     }
   ],
   "produtos": []

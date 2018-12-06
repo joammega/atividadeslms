@@ -68,3 +68,92 @@ $(".cadastrar").click(function(event) {
     alert("informe um user e uma senha.");
   }
 });
+$(".compra").each(function(index) {
+  let quant = $(this)
+    .find(".quantidadeform")
+    .find(".quantidade");
+
+  $(this)
+    .find(".btncompra")
+    .click(function() {
+      console.log(index);
+      let quantidade = "";
+      let produto = "";
+      if (quant.val() <= 0) {
+        alert("quantidade inválida");
+        return;
+      } else {
+        if (
+          sessionStorage.getItem("quant") == "" ||
+          sessionStorage.getItem("quant") == undefined
+        ) {
+          quantidade += quant.val();
+          produto += index;
+          sessionStorage.setItem("quant", quantidade);
+          sessionStorage.setItem("prod", produto);
+          alert("adicionado");
+        } else {
+          quantidade = sessionStorage.getItem("quant");
+          produto = sessionStorage.getItem("prod");
+          quantidade += "-" + quant.val();
+          produto += "-" + index;
+          sessionStorage.setItem("quant", quantidade);
+          sessionStorage.setItem("prod", produto);
+          alert("adicionado");
+        }
+      }
+    });
+});
+
+function gerarlista(prod, quant) {
+  let div = $("<div></div>").addClass("produtocar");
+  let img = $("<div></div>").addClass("imgcar");
+  div.append(img);
+  let texto = $("<div></div>").addClass("textocar");
+  let text = "";
+  let valor = "";
+  $(".texto").each(function(index) {
+    if (index == Number(prod)) {
+      text = $(this)
+        .find(".titulo")
+        .html();
+      valor = $(this)
+        .find(".valor")
+        .find(".preco")
+        .html();
+      total += valor * quant;
+    }
+  });
+  let p1 = $("<p></p>").text(text);
+  let p = $("<p></p>").text(quant + "X R$:" + valor);
+  texto.append(p1);
+  texto.append(p);
+  div.append(texto);
+  $(".dropcarrinho").append(div);
+}
+let total = 0;
+$(".carrinhobtn").click(function() {
+  $(".dropcarrinho").html("");
+  if (
+    sessionStorage.getItem("quant") != "" &&
+    sessionStorage.getItem("quant") != undefined
+  ) {
+    total = 0;
+    let quantidade = sessionStorage.getItem("quant").split("-");
+    let produto = sessionStorage.getItem("prod").split("-");
+    for (let i = 0; i < quantidade.length; i++) {
+      gerarlista(produto[i], quantidade[i]);
+    }
+    botao();
+  } else {
+    $(".dropcarrinho").append($("<p></p>").text("carrinho vazio"));
+  }
+});
+function botao() {
+  let p = $("<p></p>").text("Total: R$:" + total);
+  let button = $("<div></div>")
+    .addClass("btn btn-primary")
+    .text("Finalizar compra");
+  $(".dropcarrinho").append(p);
+  $(".dropcarrinho").append(button);
+}
